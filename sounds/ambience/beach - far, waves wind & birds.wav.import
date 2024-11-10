@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bm2wmb5o6jpj2"
+path="res://.godot/imported/beach - far, waves wind & birds.wav-3f336ae4b14ca963033651364cddf436.sample"
+
+[deps]
+
+source_file="res://sounds/ambience/beach - far, waves wind & birds.wav"
+dest_files=["res://.godot/imported/beach - far, waves wind & birds.wav-3f336ae4b14ca963033651364cddf436.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

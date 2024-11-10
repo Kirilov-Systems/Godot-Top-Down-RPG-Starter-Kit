@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://ce4vsm4umd2c3"
+path="res://.godot/imported/beach - medium, waves & birds.wav-5ca1749db2b101146588f337e20908a4.sample"
+
+[deps]
+
+source_file="res://sounds/ambience/beach - medium, waves & birds.wav"
+dest_files=["res://.godot/imported/beach - medium, waves & birds.wav-5ca1749db2b101146588f337e20908a4.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

@@ -1,0 +1,34 @@
+[gd_scene load_steps=4 format=3 uid="uid://cc6ojgfl5sse0"]
+
+[ext_resource type="Script" path="res://scripts/slot_gui.gd" id="1_2f25s"]
+[ext_resource type="Texture2D" uid="uid://drjjs1hyepgk0" path="res://graphics/inventory/inventorySlot.png" id="1_woyej"]
+[ext_resource type="PackedScene" uid="uid://gn8jam2fkcut" path="res://scenes/itemStackGui.tscn" id="3_em1a5"]
+
+[node name="Slot" type="Button"]
+self_modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(20, 20)
+anchors_preset = -1
+anchor_left = 0.491
+anchor_top = 0.485
+anchor_right = 0.543
+anchor_bottom = 0.577
+offset_left = 0.367981
+offset_top = -0.279999
+offset_right = -39.5361
+offset_bottom = -39.896
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_2f25s")
+
+[node name="background" type="Sprite2D" parent="."]
+texture = ExtResource("1_woyej")
+centered = false
+vframes = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 0
+offset_right = 20.0
+offset_bottom = 20.0
+
+[node name="Panel" parent="CenterContainer" instance=ExtResource("3_em1a5")]
+layout_mode = 2

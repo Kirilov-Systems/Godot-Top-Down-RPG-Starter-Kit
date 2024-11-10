@@ -1,0 +1,49 @@
+[gd_scene load_steps=6 format=3 uid="uid://v4djnh836dcq"]
+
+[ext_resource type="Texture2D" uid="uid://of70dfifj3tm" path="res://graphics/objects&items/farm objects free.png" id="1_hkj56"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p81oh"]
+atlas = ExtResource("1_hkj56")
+region = Rect2(96, 64, 48, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_k6w5v"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p81oh")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_h5wae"]
+radius = 8.06226
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0ahqb"]
+size = Vector2(11, 8)
+
+[node name="trunk" type="Area2D"]
+y_sort_enabled = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+y_sort_enabled = true
+position = Vector2(1, -20)
+sprite_frames = SubResource("SpriteFrames_k6w5v")
+autoplay = "default"
+offset = Vector2(0, -15)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+y_sort_enabled = true
+position = Vector2(-1, -36)
+shape = SubResource("CircleShape2D_h5wae")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+z_index = 1
+y_sort_enabled = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+z_index = 1
+y_sort_enabled = true
+position = Vector2(-1.5, -37)
+shape = SubResource("RectangleShape2D_0ahqb")

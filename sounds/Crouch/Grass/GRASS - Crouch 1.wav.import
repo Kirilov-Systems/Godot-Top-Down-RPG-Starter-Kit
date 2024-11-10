@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://te2lwoxo7uxv"
+path="res://.godot/imported/GRASS - Crouch 1.wav-1bd9d0b6b69dba5faa6d8140d80a947a.sample"
+
+[deps]
+
+source_file="res://sounds/Crouch/Grass/GRASS - Crouch 1.wav"
+dest_files=["res://.godot/imported/GRASS - Crouch 1.wav-1bd9d0b6b69dba5faa6d8140d80a947a.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

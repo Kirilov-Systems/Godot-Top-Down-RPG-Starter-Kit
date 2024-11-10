@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://semjwh6p8xkv"
+path="res://.godot/imported/rain & thunder - interior window 2.wav-8ff9962384a6bd59bd3e65b21e15e5eb.sample"
+
+[deps]
+
+source_file="res://sounds/ambience/rain & thunder - interior window 2.wav"
+dest_files=["res://.godot/imported/rain & thunder - interior window 2.wav-8ff9962384a6bd59bd3e65b21e15e5eb.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

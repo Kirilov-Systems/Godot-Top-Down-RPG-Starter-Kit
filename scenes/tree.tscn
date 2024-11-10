@@ -1,0 +1,83 @@
+[gd_scene load_steps=12 format=3 uid="uid://b8p2kb1ymwqlj"]
+
+[ext_resource type="Script" path="res://scripts/tree.gd" id="1_hnbrf"]
+[ext_resource type="Resource" uid="uid://cwvbgs304ixxd" path="res://items/stick.tres" id="2_d1y6k"]
+[ext_resource type="AudioStream" uid="uid://dhlp1ntj3l4gb" path="res://sounds/hit/wood-block-105066.mp3" id="3_ge3f0"]
+[ext_resource type="Texture2D" uid="uid://of70dfifj3tm" path="res://graphics/objects&items/farm objects free.png" id="3_gi4ha"]
+[ext_resource type="AudioStream" uid="uid://c18wxpy5p4qff" path="res://sounds/timber-tree-falling-2-40385.mp3" id="4_0ax67"]
+[ext_resource type="Texture2D" uid="uid://co7gahymrw73t" path="res://graphics/objects&items/tree.png" id="4_cvv6u"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u5dfd"]
+atlas = ExtResource("3_gi4ha")
+region = Rect2(96, 0, 48, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qoq3t"]
+atlas = ExtResource("4_cvv6u")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ix2gu"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u5dfd")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qoq3t")
+}],
+"loop": false,
+"name": &"falling",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ttaal"]
+radius = 18.0278
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_a4hdn"]
+radius = 6.0
+height = 18.0
+
+[node name="tree" type="Area2D"]
+z_index = 1
+y_sort_enabled = true
+script = ExtResource("1_hnbrf")
+itemRes = ExtResource("2_d1y6k")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+y_sort_enabled = true
+position = Vector2(1, -20)
+sprite_frames = SubResource("SpriteFrames_ix2gu")
+autoplay = "default"
+offset = Vector2(0, -15)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+y_sort_enabled = true
+position = Vector2(1, -24)
+shape = SubResource("CircleShape2D_ttaal")
+
+[node name="tree_hit" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_ge3f0")
+volume_db = -4.684
+mix_target = 1
+
+[node name="tree_falling" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_0ax67")
+volume_db = 13.117
+mix_target = 1
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+z_index = 1
+y_sort_enabled = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+z_index = 1
+y_sort_enabled = true
+position = Vector2(-1, -19)
+shape = SubResource("CapsuleShape2D_a4hdn")
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

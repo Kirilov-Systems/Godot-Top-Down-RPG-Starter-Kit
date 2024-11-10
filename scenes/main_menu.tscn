@@ -1,0 +1,67 @@
+[gd_scene load_steps=3 format=3 uid="uid://sdovb5u7737g"]
+
+[ext_resource type="Script" path="res://main_menu.gd" id="1_hponr"]
+[ext_resource type="Texture2D" uid="uid://cto78rq0685ad" path="res://graphics/1351306.png" id="2_hawgb"]
+
+[node name="main_menu" type="Node2D"]
+script = ExtResource("1_hponr")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="1351306" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(968, 164)
+scale = Vector2(1.94008, 2.10938)
+texture = ExtResource("2_hawgb")
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Start" type="Button" parent="CanvasLayer/Control"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -134.0
+offset_top = 119.0
+offset_right = 135.0
+offset_bottom = 181.0
+grow_horizontal = 2
+text = "Play"
+
+[node name="Options" type="Button" parent="CanvasLayer/Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -104.0
+offset_top = -36.5
+offset_right = 104.0
+offset_bottom = 36.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Options"
+
+[node name="Quit" type="Button" parent="CanvasLayer/Control"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -105.5
+offset_top = -59.0
+offset_right = 105.5
+grow_horizontal = 2
+grow_vertical = 0
+text = "Quit"
+
+[connection signal="pressed" from="CanvasLayer/Control/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/Options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/Quit" to="." method="_on_quit_pressed"]

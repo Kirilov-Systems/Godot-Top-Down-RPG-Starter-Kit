@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://0kdt26uqxv54"]
+
+[ext_resource type="Script" path="res://scripts/random_generated.gd" id="1_pyo1f"]
+[ext_resource type="TileSet" uid="uid://dt7oe8vmm26y0" path="res://tileset.tres" id="2_u4mhe"]
+
+[node name="proc_gen_world" type="Node2D"]
+y_sort_enabled = true
+script = ExtResource("1_pyo1f")
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource("2_u4mhe")
+format = 2

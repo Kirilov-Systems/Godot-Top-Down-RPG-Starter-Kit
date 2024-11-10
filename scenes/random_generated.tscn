@@ -1,0 +1,68 @@
+[gd_scene load_steps=12 format=3 uid="uid://0kdt26uqxv54"]
+
+[ext_resource type="TileSet" uid="uid://d3rbdu0ciogfv" path="res://tileset_autotile.tres" id="1_4sefe"]
+[ext_resource type="Script" path="res://scripts/world_loading.gd" id="2_ymt5w"]
+[ext_resource type="PackedScene" uid="uid://rf3aess7wsst" path="res://scenes/character.tscn" id="3_crw03"]
+[ext_resource type="PackedScene" uid="uid://sns2berj3fql" path="res://scenes/hit_particles.tscn" id="4_tvn1j"]
+[ext_resource type="PackedScene" uid="uid://vr7qununpjo4" path="res://scenes/leaves.tscn" id="5_2m841"]
+[ext_resource type="PackedScene" uid="uid://cnlqlvsts0ams" path="res://scenes/rocks.tscn" id="5_flwq2"]
+[ext_resource type="Texture2D" uid="uid://46cr62wigpsa" path="res://graphics/FREE Textures Of Light/128x128/128x128 textures (8).png" id="7_r34tb"]
+[ext_resource type="Script" path="res://scripts/campfire.gd" id="8_dg4lb"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_k2pnj"]
+noise_type = 4
+frequency = 0.35
+fractal_octaves = 1
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_her7d"]
+width = 1000
+height = 1000
+bump_strength = 32.0
+noise = SubResource("FastNoiseLite_k2pnj")
+
+[sub_resource type="Environment" id="Environment_o42q5"]
+background_mode = 3
+adjustment_enabled = true
+adjustment_contrast = 1.27
+adjustment_saturation = 0.92
+
+[node name="proc_gen_world" type="Node2D"]
+y_sort_enabled = true
+
+[node name="TileMap" type="TileMap" parent="."]
+y_sort_enabled = true
+tile_set = ExtResource("1_4sefe")
+rendering_quadrant_size = 32
+format = 2
+layer_0/name = "layer 0 "
+layer_1/name = "layer 1"
+layer_1/tile_data = PackedInt32Array()
+layer_2/name = "layer 2"
+layer_2/y_sort_enabled = true
+layer_2/y_sort_origin = 2
+layer_2/tile_data = PackedInt32Array(1, 33, 4)
+script = ExtResource("2_ymt5w")
+noise_tree_text = SubResource("NoiseTexture2D_her7d")
+
+[node name="hit_particles" parent="." instance=ExtResource("4_tvn1j")]
+position = Vector2(559, 207)
+
+[node name="leaves" parent="." instance=ExtResource("5_2m841")]
+
+[node name="rocks" parent="." instance=ExtResource("5_flwq2")]
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+position = Vector2(24, 15)
+color = Color(1, 0.713726, 0, 1)
+energy = 1.72
+texture = ExtResource("7_r34tb")
+script = ExtResource("8_dg4lb")
+
+[node name="character" parent="." instance=ExtResource("3_crw03")]
+up_direction = Vector2(0.707107, 0.707107)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_o42q5")
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+color = Color(0, 0.0952618, 0.571034, 1)

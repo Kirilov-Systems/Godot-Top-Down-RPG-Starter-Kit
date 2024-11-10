@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dmkxx4kwj3q70"
+path="res://.godot/imported/ventilation - medium.wav-5ded11f28be69b97d7d1e2badc723668.sample"
+
+[deps]
+
+source_file="res://sounds/ambience/ventilation - medium.wav"
+dest_files=["res://.godot/imported/ventilation - medium.wav-5ded11f28be69b97d7d1e2badc723668.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bobce08agcq2f"
+path="res://.godot/imported/rain - street, no traffic.wav-24d445b9fff96602c29f2142ac2982b8.sample"
+
+[deps]
+
+source_file="res://sounds/ambience/rain - street, no traffic.wav"
+dest_files=["res://.godot/imported/rain - street, no traffic.wav-24d445b9fff96602c29f2142ac2982b8.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

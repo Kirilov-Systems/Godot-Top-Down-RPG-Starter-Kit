@@ -1,0 +1,44 @@
+[gd_scene load_steps=7 format=3 uid="uid://b8p2kb1ymwqlj"]
+
+[ext_resource type="Texture2D" uid="uid://bbto4sw8ahvdw" path="res://graphics/Tiles/zeo254-completed-commission.png" id="1_7tl2b"]
+[ext_resource type="Script" path="res://scripts/tree.gd" id="1_hnbrf"]
+[ext_resource type="AudioStream" uid="uid://dhlp1ntj3l4gb" path="res://sounds/hit/wood-block-105066.mp3" id="3_ge3f0"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x5rpl"]
+atlas = ExtResource("1_7tl2b")
+region = Rect2(0, 0, 48, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ix2gu"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x5rpl")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ttaal"]
+radius = 18.0278
+
+[node name="tree" type="Area2D"]
+script = ExtResource("1_hnbrf")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+y_sort_enabled = true
+position = Vector2(1, -20)
+sprite_frames = SubResource("SpriteFrames_ix2gu")
+offset = Vector2(0, -15)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+y_sort_enabled = true
+position = Vector2(1, -24)
+shape = SubResource("CircleShape2D_ttaal")
+
+[node name="tree_hit" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_ge3f0")
+volume_db = -4.685
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

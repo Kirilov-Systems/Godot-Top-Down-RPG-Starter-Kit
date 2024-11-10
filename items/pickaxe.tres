@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="InventoryItem" load_steps=6 format=3 uid="uid://3qyx5v03bs0w"]
+
+[ext_resource type="Script" path="res://scripts/inventoryItem.gd" id="1_ho68g"]
+[ext_resource type="Resource" uid="uid://cwvbgs304ixxd" path="res://items/stick.tres" id="1_nrqot"]
+[ext_resource type="Resource" uid="uid://cu28ioh2h1k5k" path="res://items/stone.tres" id="2_6t8th"]
+[ext_resource type="Texture2D" uid="uid://c6lb8jjcsqxo7" path="res://graphics/icons/PNG_16/itens73.png" id="2_k5vaj"]
+[ext_resource type="Script" path="res://scripts/item_scripts/axe.gd" id="4_5j6fb"]
+
+[resource]
+script = ExtResource("1_ho68g")
+name = "Pickaxe"
+texture = ExtResource("2_k5vaj")
+maxAmountPrStack = 1
+component1 = ExtResource("1_nrqot")
+component2 = ExtResource("2_6t8th")
+scriptToItem = ExtResource("4_5j6fb")

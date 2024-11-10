@@ -1,0 +1,23 @@
+[gd_scene load_steps=2 format=3 uid="uid://vr7qununpjo4"]
+
+[ext_resource type="Texture2D" uid="uid://dyx4u0bq0k8pg" path="res://graphics/Tiles/leaf.png" id="1_dqj0j"]
+
+[node name="leaves" type="CPUParticles2D"]
+top_level = true
+emitting = false
+amount = 20
+lifetime = 3.0
+one_shot = true
+speed_scale = 6.0
+explosiveness = 1.0
+randomness = 0.47
+lifetime_randomness = 0.31
+local_coords = true
+texture = ExtResource("1_dqj0j")
+spread = 180.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 10.0
+initial_velocity_max = 10.0
+angular_velocity_min = -72.73
+angular_velocity_max = 87.27
+scale_amount_max = 3.0

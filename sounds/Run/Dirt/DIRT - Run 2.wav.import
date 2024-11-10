@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dq6ppw3hx8i7w"
+path="res://.godot/imported/DIRT - Run 2.wav-0f160574db9a0138be6b801d19eb33a3.sample"
+
+[deps]
+
+source_file="res://sounds/Run/Dirt/DIRT - Run 2.wav"
+dest_files=["res://.godot/imported/DIRT - Run 2.wav-0f160574db9a0138be6b801d19eb33a3.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

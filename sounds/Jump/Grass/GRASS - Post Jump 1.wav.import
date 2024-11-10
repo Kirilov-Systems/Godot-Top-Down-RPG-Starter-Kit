@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://evoncdw8ycq1"
+path="res://.godot/imported/GRASS - Post Jump 1.wav-c47101845f8d01dca6e6567babb61e9a.sample"
+
+[deps]
+
+source_file="res://sounds/Jump/Grass/GRASS - Post Jump 1.wav"
+dest_files=["res://.godot/imported/GRASS - Post Jump 1.wav-c47101845f8d01dca6e6567babb61e9a.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

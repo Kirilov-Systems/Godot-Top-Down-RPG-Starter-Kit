@@ -1,0 +1,68 @@
+[gd_scene load_steps=3 format=3 uid="uid://dft16w1ooi7ok"]
+
+[ext_resource type="Script" path="res://main_menu.gd" id="1_icx3m"]
+[ext_resource type="Texture2D" uid="uid://cto78rq0685ad" path="res://graphics/1351306.png" id="2_kojum"]
+
+[node name="main_menu" type="Node2D"]
+script = ExtResource("1_icx3m")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="1351306" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(968, 164)
+scale = Vector2(1.94008, 2.10938)
+texture = ExtResource("2_kojum")
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="CanvasLayer/Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -475.0
+offset_top = -336.5
+offset_right = 475.0
+offset_bottom = 336.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Button" type="Button" parent="CanvasLayer/Control/Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.506
+anchor_right = 0.5
+anchor_bottom = 0.506
+offset_left = -101.0
+offset_top = 59.462
+offset_right = 100.0
+offset_bottom = 98.462
+grow_horizontal = 2
+grow_vertical = 2
+text = "Play"
+
+[node name="TextEdit" type="TextEdit" parent="CanvasLayer/Control/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -98.0
+offset_top = -3.5
+offset_right = 87.0
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2
+placeholder_text = "seed"
+
+[connection signal="pressed" from="CanvasLayer/Control/Panel/Button" to="." method="_on_button_pressed"]

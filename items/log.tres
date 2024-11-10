@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="InventoryItem" load_steps=5 format=3 uid="uid://dy1n5bkwcs1o7"]
+
+[ext_resource type="Script" path="res://scripts/inventoryItem.gd" id="1_6u5ft"]
+[ext_resource type="Resource" uid="uid://cwvbgs304ixxd" path="res://items/stick.tres" id="1_8sno7"]
+[ext_resource type="Texture2D" uid="uid://bsyj6ldfcd0jf" path="res://graphics/icons/log.png" id="2_8y7dy"]
+[ext_resource type="Script" path="res://scripts/item_scripts/axe.gd" id="3_mgsof"]
+
+[resource]
+script = ExtResource("1_6u5ft")
+name = "Log"
+texture = ExtResource("2_8y7dy")
+maxAmountPrStack = 4
+component1 = ExtResource("1_8sno7")
+component2 = ExtResource("1_8sno7")
+scriptToItem = ExtResource("3_mgsof")

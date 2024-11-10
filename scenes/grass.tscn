@@ -1,0 +1,63 @@
+[gd_scene load_steps=9 format=3 uid="uid://dj1qru04d77wk"]
+
+[ext_resource type="Script" path="res://scripts/grass.gd" id="1_02ntu"]
+[ext_resource type="Texture2D" uid="uid://c4gto3mtfg087" path="res://graphics/objects&items/grass.png" id="1_7vlc3"]
+[ext_resource type="AudioStream" uid="uid://dhlp1ntj3l4gb" path="res://sounds/hit/wood-block-105066.mp3" id="3_32ylm"]
+[ext_resource type="AudioStream" uid="uid://c18wxpy5p4qff" path="res://sounds/timber-tree-falling-2-40385.mp3" id="4_13ir5"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dh5h7"]
+atlas = ExtResource("1_7vlc3")
+region = Rect2(0, 0, 9, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_60njk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dh5h7")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_gqdd3"]
+radius = 18.0278
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ge5rf"]
+radius = 6.0
+height = 18.0
+
+[node name="grass" type="Area2D"]
+script = ExtResource("1_02ntu")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+y_sort_enabled = true
+position = Vector2(1, -20)
+sprite_frames = SubResource("SpriteFrames_60njk")
+autoplay = "default"
+offset = Vector2(0, -15)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+y_sort_enabled = true
+position = Vector2(1, -24)
+shape = SubResource("CircleShape2D_gqdd3")
+
+[node name="tree_hit" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_32ylm")
+volume_db = -4.684
+mix_target = 1
+
+[node name="tree_falling" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_13ir5")
+volume_db = 13.117
+mix_target = 1
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+z_index = 1
+y_sort_enabled = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+z_index = 1
+y_sort_enabled = true
+position = Vector2(-1, -19)
+shape = SubResource("CapsuleShape2D_ge5rf")

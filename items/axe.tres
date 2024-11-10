@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="InventoryItem" load_steps=6 format=3 uid="uid://cje8fmncnan8t"]
+
+[ext_resource type="Resource" uid="uid://cwvbgs304ixxd" path="res://items/stick.tres" id="1_qo5uo"]
+[ext_resource type="Script" path="res://scripts/inventoryItem.gd" id="1_tipmm"]
+[ext_resource type="Resource" uid="uid://cu28ioh2h1k5k" path="res://items/stone.tres" id="2_jpobp"]
+[ext_resource type="Texture2D" uid="uid://crtai47womdyk" path="res://graphics/icons/axe.png" id="2_kue7b"]
+[ext_resource type="Script" path="res://scripts/item_scripts/axe.gd" id="4_2b53s"]
+
+[resource]
+script = ExtResource("1_tipmm")
+name = "Axe"
+texture = ExtResource("2_kue7b")
+maxAmountPrStack = 1
+component1 = ExtResource("1_qo5uo")
+component2 = ExtResource("2_jpobp")
+scriptToItem = ExtResource("4_2b53s")

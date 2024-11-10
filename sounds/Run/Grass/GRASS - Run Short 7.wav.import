@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://euglnpho6hbq"
+path="res://.godot/imported/GRASS - Run Short 7.wav-842d9b5310244b226af22c2198a5f187.sample"
+
+[deps]
+
+source_file="res://sounds/Run/Grass/GRASS - Run Short 7.wav"
+dest_files=["res://.godot/imported/GRASS - Run Short 7.wav-842d9b5310244b226af22c2198a5f187.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

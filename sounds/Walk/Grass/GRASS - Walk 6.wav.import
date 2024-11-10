@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bk14dix2b65kb"
+path="res://.godot/imported/GRASS - Walk 6.wav-b42bcd6588031f6d6f6998f136e5d364.sample"
+
+[deps]
+
+source_file="res://sounds/Walk/Grass/GRASS - Walk 6.wav"
+dest_files=["res://.godot/imported/GRASS - Walk 6.wav-b42bcd6588031f6d6f6998f136e5d364.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

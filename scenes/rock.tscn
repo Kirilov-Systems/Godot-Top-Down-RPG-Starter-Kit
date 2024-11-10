@@ -1,0 +1,63 @@
+[gd_scene load_steps=10 format=3 uid="uid://cln5ywgqa2pkk"]
+
+[ext_resource type="Script" path="res://scripts/rock.gd" id="1_3ul84"]
+[ext_resource type="Texture2D" uid="uid://cp4oibayhdu1s" path="res://graphics/objects&items/rock.png" id="1_uy6ps"]
+[ext_resource type="AudioStream" uid="uid://do1vfghr2xnil" path="res://sounds/inventory/metal-small2.wav" id="2_5bau8"]
+[ext_resource type="Resource" uid="uid://cu28ioh2h1k5k" path="res://items/stone.tres" id="2_6tayb"]
+[ext_resource type="AudioStream" uid="uid://toq2sbuaj60n" path="res://sounds/inventory/chainmail2.wav" id="3_55hmy"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ttaal"]
+radius = 7.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_a4hdn"]
+radius = 3.0
+height = 12.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6h26h"]
+atlas = ExtResource("1_uy6ps")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_yl3v8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6h26h")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="rock" type="Area2D"]
+z_index = 1
+y_sort_enabled = true
+script = ExtResource("1_3ul84")
+itemRes = ExtResource("2_6tayb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_ttaal")
+
+[node name="tree_hit" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_5bau8")
+volume_db = 9.37
+mix_target = 1
+
+[node name="tree_falling" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_55hmy")
+mix_target = 1
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+z_index = 1
+y_sort_enabled = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0, 1)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_a4hdn")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -2)
+sprite_frames = SubResource("SpriteFrames_yl3v8")
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

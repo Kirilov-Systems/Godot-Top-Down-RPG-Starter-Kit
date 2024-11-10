@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://sns2berj3fql"]
+
+[node name="hit_particles" type="CPUParticles2D"]
+top_level = true
+z_index = 1
+y_sort_enabled = true
+rotation = 1.52367
+scale = Vector2(4, 4)
+skew = 0.507891
+emitting = false
+lifetime = 0.1
+one_shot = true
+emission_shape = 3
+emission_rect_extents = Vector2(1, 1)
+spread = 180.0
+gravity = Vector2(0, 0)
+scale_amount_max = 3.0

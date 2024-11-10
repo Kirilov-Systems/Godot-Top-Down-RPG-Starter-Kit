@@ -1,0 +1,22 @@
+[gd_scene load_steps=2 format=3 uid="uid://cwnpblgk2gn52"]
+
+[sub_resource type="Environment" id="Environment_uckqy"]
+background_mode = 3
+background_energy_multiplier = 0.33
+tonemap_mode = 3
+tonemap_exposure = 0.66
+glow_enabled = true
+glow_normalized = true
+glow_intensity = 0.88
+glow_bloom = 0.1
+glow_blend_mode = 0
+fog_light_color = Color(1, 1, 1, 1)
+fog_sun_scatter = 0.23
+fog_density = 0.1035
+fog_height = 40.57
+fog_height_density = -3.3684
+adjustment_enabled = true
+adjustment_saturation = 1.15
+
+[node name="WorldEnvironment" type="WorldEnvironment"]
+environment = SubResource("Environment_uckqy")

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://eenv6dpfiabi"
+path="res://.godot/imported/residential night - frogs, crickets, distant traffic.wav-dc813d4edba16edbeaa9234ea3273e85.sample"
+
+[deps]
+
+source_file="res://sounds/ambience/residential night - frogs, crickets, distant traffic.wav"
+dest_files=["res://.godot/imported/residential night - frogs, crickets, distant traffic.wav-dc813d4edba16edbeaa9234ea3273e85.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://gn8jam2fkcut"]
+
+[ext_resource type="Script" path="res://scripts/itemsStackGui.gd" id="1_4i2jv"]
+[ext_resource type="FontFile" uid="uid://cbsj6h2lp8ves" path="res://graphics/fonts/EightBitDragon-anqx.ttf" id="1_m4w3j"]
+
+[node name="Panel" type="Panel"]
+script = ExtResource("1_4i2jv")
+
+[node name="item" type="Sprite2D" parent="."]
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = -9.0
+offset_right = 10.0
+offset_bottom = 23.0
+theme_override_fonts/font = ExtResource("1_m4w3j")
+theme_override_font_sizes/font_size = 10
+horizontal_alignment = 2

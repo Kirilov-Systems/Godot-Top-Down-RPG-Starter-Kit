@@ -1,0 +1,35 @@
+[gd_scene load_steps=6 format=3 uid="uid://cuse4vhp7mxbr"]
+
+[ext_resource type="Shader" path="res://shader/logo.tres" id="1_kkjoa"]
+[ext_resource type="Texture2D" uid="uid://m6kh88xudi0l" path="res://graphics/logo-no-background.png" id="2_ytbkc"]
+[ext_resource type="Script" path="res://scripts/scrolling_lighting.gd" id="3_msexr"]
+[ext_resource type="AudioStream" uid="uid://cj0lal1iu6ltp" path="res://sounds/logo.mp3" id="4_biaev"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_aoubp"]
+resource_local_to_scene = true
+shader = ExtResource("1_kkjoa")
+
+[node name="scrolling_lighting" type="TextureRect"]
+material = SubResource("ShaderMaterial_aoubp")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_ytbkc")
+expand_mode = 2
+script = ExtResource("3_msexr")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_biaev")
+autoplay = true
+
+[node name="ColorRect" type="ColorRect" parent="."]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)

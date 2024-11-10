@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://m3hyryve2ssb"
+path="res://.godot/imported/beach - very close, waves & foam.wav-0312b0926b1485d3dc823a72e9b86f8c.sample"
+
+[deps]
+
+source_file="res://sounds/ambience/beach - very close, waves & foam.wav"
+dest_files=["res://.godot/imported/beach - very close, waves & foam.wav-0312b0926b1485d3dc823a72e9b86f8c.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

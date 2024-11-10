@@ -1,0 +1,50 @@
+[gd_scene load_steps=6 format=3 uid="uid://bq0jgbp6wdnoq"]
+
+[ext_resource type="Script" path="res://scripts/craft_menu.gd" id="1_fpxr5"]
+[ext_resource type="Resource" uid="uid://cvbw5ydylj7eh" path="res://playerInventory.tres" id="2_j5ef7"]
+[ext_resource type="Resource" uid="uid://dy1n5bkwcs1o7" path="res://items/log.tres" id="3_qipmy"]
+[ext_resource type="Script" path="res://scripts/craft_button.gd" id="4_utdfp"]
+[ext_resource type="Resource" uid="uid://3qyx5v03bs0w" path="res://items/pickaxe.tres" id="5_mtayr"]
+
+[node name="Control" type="Control"]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_fpxr5")
+inventory_ = ExtResource("2_j5ef7")
+log = ExtResource("3_qipmy")
+
+[node name="log" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -4.0
+offset_right = 122.0
+offset_bottom = 24.0
+grow_vertical = 2
+text = "Craft Log"
+script = ExtResource("4_utdfp")
+item = ExtResource("3_qipmy")
+amount = 1
+
+[node name="pickaxe" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = 44.5
+offset_right = 122.0
+offset_bottom = 75.5
+grow_vertical = 2
+text = "Craft Pickaxe"
+script = ExtResource("4_utdfp")
+item = ExtResource("5_mtayr")
+amount = 1
+
+[connection signal="pressed" from="log" to="." method="_on_log_pressed"]
+[connection signal="pressed" from="pickaxe" to="." method="_on_log_pressed"]

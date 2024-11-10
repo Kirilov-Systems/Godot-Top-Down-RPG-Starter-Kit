@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="InventoryItem" load_steps=4 format=3 uid="uid://cu28ioh2h1k5k"]
+
+[ext_resource type="Script" path="res://scripts/inventoryItem.gd" id="1_vhq5u"]
+[ext_resource type="Script" path="res://scripts/item_scripts/axe.gd" id="2_sffn1"]
+[ext_resource type="Texture2D" uid="uid://ca16c2sccbf1l" path="res://graphics/icons/stone.png" id="2_ycsv8"]
+
+[resource]
+script = ExtResource("1_vhq5u")
+name = "Stone"
+texture = ExtResource("2_ycsv8")
+maxAmountPrStack = 100
+scriptToItem = ExtResource("2_sffn1")

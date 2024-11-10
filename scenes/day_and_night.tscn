@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://yo454nashqhp"]
+
+[node name="day_and_night" type="StaticBody2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -3156.0
+offset_top = -1362.0
+offset_right = 4885.0
+offset_bottom = 3339.0
+color = Color(0, 0, 0.133333, 0.588235)
